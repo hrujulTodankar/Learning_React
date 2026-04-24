@@ -1,15 +1,20 @@
 import React from 'react'
 
+
+const EnterText = (obj) => {  
+  console.log(obj.target.value);
+}
 const App = () => {
 
-  const btnclick = () =>{
-    console.log("button was clicked")
-  }
+  
   return (
     <div>
-      <button onClick={btnclick}>
-        click me
-      </button>
+      <input style={{ margin:"1rem" ,padding:"1rem"}}
+      type="text"
+      placeholder='Enter Text' 
+      onChange={(obj)=>{
+        EnterText(obj)
+      }}/>
     </div>
   )
 }
