@@ -1,17 +1,28 @@
-import React from 'react'
+import React, { use } from 'react'
 import { useState } from 'react';
 
 const App = () => {
-  const [Num, setNum] = useState(10);
+  const [info , setInfo] = useState({
+    name:"Hrujul Todankar",
+    age: 22,
+    city: "Mumbai"
+  });
 
-  const ChangeNum = () => {
-    setNum(Num + 10);
-  }
+  console.log(info);
+
+  
 
   return (
     <>
-    <p>The Value of {Num} Can be Changed On click by 10</p>
-    <button onClick={ChangeNum}>Click Me</button>
+    <h4>{info.name}</h4>
+    <h4>{info.age}</h4>
+    <h4>{info.city}</h4>
+
+    <input type="text" value={info.name} onChange={}/>
+
+    <button>
+      Update Info
+    </button>
     </>
   );
 }
